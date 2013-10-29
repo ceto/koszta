@@ -1,0 +1,66 @@
+.sidebar {
+	color:$footer-text;
+	margin:0 auto;
+  max-width: 1140px;
+
+
+
+	.widget {
+		@include breakpoint($s2){
+			width:50%;
+			float:left;
+      padding:0 1em
+		}	
+	
+  }
+  
+  .widget_moreref {
+    @include breakpoint($s2){
+      //width:66.6666666666%;
+      padding:0;
+    } 
+  
+
+  ul {
+    margin:1em 0;
+    padding:0;
+    li {
+      list-style-type: none;
+    }
+    a {
+      //text-align: center;
+      display:block;
+      float:left;
+      width:33.333333333%;
+      padding:0.25em;
+
+
+      img {
+        width:40%;
+        display:block;
+        //margin:0 auto;  
+        float:left;
+      }
+      .neve {
+        width:60%;
+        display:block;
+        padding:0.25em 0.5em;
+        //margin:0 auto;
+        float:left;
+        font-family: 'TrajanPro', serif;
+        font-size: 0.875em;
+
+      }
+
+    }
+
+
+  }
+
+
+  }
+
+
+
+
+}

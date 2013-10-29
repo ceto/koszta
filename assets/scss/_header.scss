@@ -1,0 +1,41 @@
+.banner {
+	background: 
+	url('../img/menu_szele.png') repeat-x center bottom,
+	url(../img/header_bg.jpg) repeat-x center top white;
+}
+
+.fej {
+	margin:0 auto;
+	max-width: $maximum;
+	height:112px;
+	padding:0 1em;
+}
+.logo {
+	text-decoration: none;
+	display: block;
+	margin:0 auto;
+	width:170px;
+	
+	@include breakpoint($s1){
+		float:left;
+		width:auto;
+	} 
+}
+
+.slogan {
+	font-family: "freehand", serif;
+	font-size: 2em;
+	line-height:0.75em;
+	color:black;
+	text-align: center;
+	//margin:1.25em 1em 0;
+	display: inline-block;
+	@include breakpoint($s1){
+		float:left;
+		margin:1em 1em 0;
+		text-align: left;
+		width:40%;
+
+	} 
+
+}
