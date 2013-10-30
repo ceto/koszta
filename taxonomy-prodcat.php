@@ -5,6 +5,8 @@
  Template Name: Reference List Tax
  */
 ?>
+<div id="fullcs" class="clearfix">
+<?php $aktcat = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 <nav class="nav-prodcat">
   <h1 class="reflist-title">
     <?php _e('Bőrdíszműves munkák','root'); ?>
@@ -17,13 +19,13 @@
   ?>
   <ul class="prodcat-menu">
     <li>
-      <a href="#" title="">
+      <a class="<?php echo $aktcat->slug==''?'active':''; ?>" href="?page_id=13" title="Teljes portfolió">
         Mutasd mindet
       </a>
     </li>
     <?php foreach ($terms as $term) { ?>
       <li>
-      <a data-catslug="<?php echo $term->slug; ?>" href="<?php echo get_term_link($term); ?>" title="<?php echo $term->name; ?>">
+      <a class="<?php echo $term->slug==$aktcat->slug?'active':''; ?>" data-catslug="<?php echo $term->slug; ?>" href="<?php echo get_term_link($term); ?>" title="<?php echo $term->name; ?>">
         <?php echo $term->name; ?>
       </a>
       </li>
@@ -34,7 +36,8 @@
 	$the_references =new WP_Query (
 		array(
 			'post_type' => 'reference',
-			'posts_per_page' => -1
+			'posts_per_page' => -1,
+      'prodcat' => $aktcat->slug
 		)
 	);
 ?>
@@ -58,6 +61,7 @@
     </a>
   </li>
 <?php endwhile; ?>
+<?php wp_reset_query(); ?>
 </ul>
 </div>
 <script>
@@ -77,3 +81,5 @@
 
 	// });
 </script>
+</div><!-- /#fullcs -->
+

@@ -80,6 +80,36 @@
 		transition: all 400ms ease-in;
 
 	}
+}
 
+
+.refnyito {
+	position: absolute;
+	left:50%;
+	z-index:1;
+	margin-left:1em;
+	a {
+		display: block;
+		width:40px;
+		height: 40px;
+		color:white;
+		text-align: center;
+		line-height: 40px;
+		background-color: black;
+	}
+}
+
+#chooser {
+	max-height:0;
+	overflow:hidden;
+	transition: max-height 600ms ease-in-out;
+	
+	&.open {
+		max-height:2000px;
+		margin-bottom: 2em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid $dark-text;
+	}
 
 }
+

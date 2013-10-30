@@ -61,9 +61,10 @@ jQuery(document).ready(function() {
     }
   });
 
-  // $('.refnyito a').click(function(e){
-  //   e.preventDefault();
-  //   $('#chooser').load('?page_id=13 .reflist');
-  // });
-  
+  $('.refnyito a').click(function(e){
+    e.preventDefault();
+    //$('#chooser').load('?page_id=13 #fullcs');
+    $('#chooser').toggleClass('open');
+    //$( "#chooser" ).show( "slow", function() { // Animation complete.  //});
+  });
 });

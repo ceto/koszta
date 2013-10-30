@@ -1,5 +1,12 @@
-<!-- <div class="refnyito"><a href="#">Porfolió</a></div>
-<div class="chooser clearfix" id="chooser"></div> -->
+<div class="refnyito"><a href="#">M</a></div>
+<div class="chooser" id="chooser">
+  <?php get_template_part('taxonomy-prodcat'); ?>
+</div>
+
+
+
+
+<?php // $akt_prodcat = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <figure class="entry-figure">
