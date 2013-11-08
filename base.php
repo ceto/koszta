@@ -21,9 +21,11 @@
         </div><!-- /.main -->
       </div>
       <?php if (roots_display_sidebar()) : ?>
+      <div class="sidebar-wrap">
         <aside class="sidebar clearfix <?php echo roots_sidebar_class(); ?>" role="complementary">
           <?php include roots_sidebar_path(); ?>
         </aside><!-- /.sidebar -->
+      </div>
       <?php endif; ?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->

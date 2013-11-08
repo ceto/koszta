@@ -56,7 +56,9 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_front_page',
+      'is_home',
+      array('is_page', array('2', ))
     ),
     /**
      * Page template checks (via is_page_template())
@@ -64,7 +66,9 @@ function roots_display_sidebar() {
      */
     array(
       'template-custom.php',
-      'template-contact.php'
+      'template-contact.php',
+      'template-galleria.php',
+      'taxonomy-prodcat.php'
     )
   );
 

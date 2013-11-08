@@ -67,4 +67,31 @@ jQuery(document).ready(function() {
     $('#chooser').toggleClass('open');
     //$( "#chooser" ).show( "slow", function() { // Animation complete.  //});
   });
+
+
+
+  if (typeof Galleria!=='undefined') {
+    Galleria.loadTheme('http://kommandanten.no/wp-content/themes/komandanten/assets/galleria/classic/galleria.classic.js');
+    Galleria.run('#galleria',{
+      transition: 'fade',
+      imageCrop: true,
+      autoplay: 3000,
+      showInfo: false,
+    });
+    Galleria.ready(function() {
+      var gallery = this;
+      $('<a>', {
+          href: '#',
+          class:'fullbtn',
+          click:function(e) {
+              e.preventDefault();
+              gallery.enterFullscreen();
+          }
+      }).append('<i class="entypo resize-full"></i>' ).appendTo('#galleria');
+    
+    });
+  }
+  
+
+
 });

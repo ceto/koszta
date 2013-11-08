@@ -60,7 +60,39 @@ function create_prodcat_taxonomies() {
 }
 
 
+/************ Fullscreen Inspirational Gallery **********/
+function create_fullscreen_gallery() {
+  $labels = array(
+    'name' => __( 'Gallery Photo', 'root' ),
+    'singular_name' => __( 'Gallery Photo', 'root' ),
+    'add_new' => __( 'Add New Photo', 'root' ),
+    'add_new_item' => __( 'Add New Photo', 'root' ),
+    'edit_item' => __( 'Edit Photo', 'root' ),
+    'new_item' => __( 'New Photo', 'root' ),
+    'all_items' => __( 'All Photos', 'root' ),
+    'view_item' => __( 'View Photo', 'root' ),
+    'search_items' => __( 'Search Photos', 'root' ),
+    'menu_name' => __( 'Fullscreen Gallery', 'root' )
+  );
 
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'galleryphoto' ),
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array( 'title', 'editor', 'thumbnail' )
+  ); 
+
+  register_post_type( 'galleryphoto', $args );
+}
+add_action( 'init', 'create_fullscreen_gallery' ); 
 
 
 

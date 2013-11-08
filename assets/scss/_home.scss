@@ -1,5 +1,5 @@
 .home {
-		background: url('../img/leather.jpg') no-repeat center 150px black;
+		background: url('../img/index_bg_1920px_3.jpg') no-repeat right 150px black;
   	background-size: cover;
   	background-attachment: fixed;
 
@@ -9,26 +9,24 @@
 		background: none;
 	}
 	.main-wrap {
-		&:before {
-			display: none;
-		}
+		background: none;
+		box-shadow: none;
 	}
 
 	.main{
 		color:$footer-text;
-		box-shadow: none;
-
-		background: none;
-
-  	//background: url('../img/leather.jpg') no-repeat center center black;
-  	//background-size: cover;
-
-
-		
 		font-size: 1.25em;
 		text-transform: uppercase;
-		padding-right:38%;
-		padding-top:20%;
+		padding-top:4em;
+
+
+		@include breakpoint($s2){
+			padding-right:30%;
+			padding-top:20%;
+			padding-left: 2em;
+    } 
+
+
 
 		h1 {
 			display:none;

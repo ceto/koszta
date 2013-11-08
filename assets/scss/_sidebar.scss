@@ -1,52 +1,81 @@
+.sidebar-wrap {
+  background: linear-gradient(to bottom, $dark-bg 75%, $light-bg 100%);  
+}
 .sidebar {
+
 	color:$footer-text;
 	margin:0 auto;
-  max-width: 1140px;
+  max-width: $maximum;
+  padding:1em;
 
 
 
-	.widget {
-		@include breakpoint($s2){
-			width:50%;
-			float:left;
-      padding:0 1em
-		}	
-	
+  .jobbfel {
+    @include breakpoint($s2){
+      width:50%;
+      float:right;
+    } 
+  }
+
+  .balfel {
+    @include breakpoint($s2){
+      width:48%;
+      float:left;
+    } 
+  }
+
+}
+
+  .widget_fbcomm {
+    h3 {
+      margin-bottom:1em;
+    }
+    .fb-comments {
+      padding: 0.5em;
+      background: #333;
+      border: 2px solid $light-bg;
+
+    }
   }
   
   .widget_moreref {
+
     @include breakpoint($s2){
       //width:66.6666666666%;
-      padding:0;
+      //padding:0;
+      //clear:left;
+      //float:left;
+
     } 
   
 
   ul {
-    margin:1em 0;
+    margin:1em -0.75em 1em; 
     padding:0;
     li {
       list-style-type: none;
     }
     a {
-      //text-align: center;
+      text-align: center;
       display:block;
+      position: relative;
       float:left;
-      width:33.333333333%;
-      padding:0.25em;
+      width:25%;
+      padding:0.75em;
 
 
       img {
-        width:40%;
+        //width:40%;
         display:block;
         //margin:0 auto;  
-        float:left;
+        //float:left;
       }
       .neve {
-        width:60%;
+        position: absolute;
         display:block;
-        padding:0.25em 0.5em;
-        //margin:0 auto;
-        float:left;
+        top:0; right:0;
+        bottom:0; left:0;
+        padding:1em 0.75em;
         font-family: 'TrajanPro', serif;
         font-size: 0.875em;
 
@@ -62,5 +91,3 @@
 
 
 
-
-}

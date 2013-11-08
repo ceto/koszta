@@ -101,6 +101,7 @@
 }
 
 .nav-prodcat {
+	display: none;
 	width:25%;
 	float:left;
 	padding:0 2em 0 1em;
@@ -134,4 +135,26 @@
 			border-bottom: 1px solid $dark-text;
 		}
 	}
+}
+
+
+.navigation-post {
+	a {
+		max-width: 48%;
+		&[rel="prev"]{
+			float:left;
+		}
+
+		&[rel="next"]{
+			float:right;
+		}
+
+
+		
+
+		
+
+
+	}
+
 }
