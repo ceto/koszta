@@ -1,0 +1,71 @@
+.page-template-template-contact-php{
+    background: url('../img/index_bg_1920px_2.jpg') no-repeat right 50px black;
+    background-size: cover;
+    background-attachment: fixed;
+  
+  .main-wrap {
+    background: none;
+    box-shadow: none;
+  }
+  
+  .main{
+    color:$footer-text;
+    font-size: 1.25em;
+    padding-top:4em;
+    @include breakpoint($s2){
+      padding-right:30%;
+      //padding-top:20%;
+      //padding-left: 2em;
+    } 
+
+  }
+
+  .content-info{
+    display:none;
+  }
+}
+
+.page-id-2 {
+  background: url('../img/bemut.jpg') no-repeat right bottom white;
+  background-size: 200%;
+  padding-bottom:25em;
+
+  
+  @include breakpoint($s1) {
+      background-size: 150%;
+      padding-bottom: 30em;
+
+  }
+      
+  @include breakpoint($s2) {
+    background-size: 100%;
+    background-attachment: fixed;
+    padding-bottom: 4em;
+  }
+
+  @include breakpoint($s3) {
+    background-size: 120%;
+  }
+
+  .main-wrap {
+    background: none;
+    box-shadow: none;
+  }
+  
+  .main {
+    
+    @include breakpoint($s2) {
+      padding-right:38%;
+    }
+
+    @include breakpoint($s3) {
+      padding-right:48%;
+    }
+  
+  
+  }
+
+  .content-info{
+    display:none;
+  }
+}
