@@ -45,6 +45,35 @@ var UTIL = {
 
 $(document).ready(UTIL.loadEvents);
 
+// $(function() {
+//   $('a[href*=#]:not([href=#])').click(function() {
+//     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//       if (target.length) {
+//         $('html,body').animate({
+//           scrollTop: target.offset().top
+//         }, 1000);
+//         return true;
+//       }
+//     }
+//   });
+// });
+
+
+function fbs_click(width, height) {
+    var leftPosition, topPosition;
+    //Allow for borders.
+    leftPosition = (window.screen.width / 2) - ((width / 2) + 10);
+    //Allow for title and status bars.
+    topPosition = (window.screen.height / 2) - ((height / 2) + 50);
+    var windowFeatures = "status=no,height=" + height + ",width=" + width + ",resizable=yes,left=" + leftPosition + ",top=" + topPosition + ",screenX=" + leftPosition + ",screenY=" + topPosition + ",toolbar=no,menubar=no,scrollbars=no,location=no,directories=no";
+    var u=location.href;
+    var t=document.title;
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer', windowFeatures);
+    return false;
+}
+
 jQuery(document).ready(function() {
 
   var top = $('.nav-row').offset().top - parseFloat($('.nav-row').css('marginTop').replace(/auto/, 0));
@@ -61,40 +90,86 @@ jQuery(document).ready(function() {
     }
   });
 
-  $('.refnyito a').click(function(e){
-    e.preventDefault();
-    //$('#chooser').load('?page_id=13 #fullcs');
-    $('#chooser').toggleClass('open');
-    //$( "#chooser" ).show( "slow", function() { // Animation complete.  //});
+  $('.gallery').each(function() {
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      closeOnContentClick: true,
+      closeBtnInside: false,
+      fixedContentPos: true,
+      mainClass: 'mfp-no-margins mfp-with-zoom',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        verticalFit: true,
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title');
+        }
+      },
+      zoom: {
+        enabled: true,
+        duration: 300 // don't foget to change the duration also in CSS
+      }
+
+    });
+  });
+
+
+  $('.popup').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
   });
 
 
 
-  if (typeof Galleria!=='undefined') {
-    Galleria.loadTheme('http://kommandanten.no/wp-content/themes/komandanten/assets/galleria/classic/galleria.classic.js');
-    Galleria.run('#galleria',{
-      transition: 'fade',
-      imageCrop: true,
-      autoplay: 3000,
-      showInfo: false,
-    });
-    Galleria.ready(function() {
-      var gallery = this;
-      $('<a>', {
-          href: '#',
-          class:'fullbtn',
-          click:function(e) {
-              e.preventDefault();
-              gallery.enterFullscreen();
-          }
-      }).append('<i class="entypo resize-full"></i>' ).appendTo('#galleria');
+  $('.ajax-popup').magnificPopup({
+    type: 'ajax',
+    alignTop: true,
+    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+  });
+
+
+
+  // if (typeof Galleria!=='undefined') {
+  //   Galleria.loadTheme('http://kommandanten.no/wp-content/themes/komandanten/assets/galleria/classic/galleria.classic.js');
+  //   Galleria.run('#galleria',{
+  //     transition: 'fade',
+  //     imageCrop: true,
+  //     autoplay: 3000,
+  //     showInfo: false,
+  //   });
+  //   Galleria.ready(function() {
+  //     var gallery = this;
+  //     $('<a>', {
+  //         href: '#',
+  //         class:'fullbtn',
+  //         click:function(e) {
+  //             e.preventDefault();
+  //             gallery.enterFullscreen();
+  //         }
+  //     }).append('<i class="entypo resize-full"></i>' ).appendTo('#galleria');
     
-    });
-  }
+  //   });
+  // }
   
-  $('.comment-nyito').click(function(e){
+  $('.opbutt').click(function(e){
     e.preventDefault();
-    $('.fb-comments').toggleClass('open');
+    $('.nav-row').toggleClass('open');
   });
 
 });

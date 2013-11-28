@@ -15,6 +15,8 @@ function roots_setup() {
   add_theme_support('post-thumbnails');
   // set_post_thumbnail_size(150, 150, false);
   //add_image_size('category-thumb', 300, 9999); // 300px wide (and unlimited height)
+  add_image_size('greato', 1280, 1280, false);
+  add_image_size('great11', 1280, 1280, true);
   add_image_size('medium11', 768, 768, true);
   add_image_size('small11', 480, 480, true);
   add_image_size('tiny11', 240, 240, true);

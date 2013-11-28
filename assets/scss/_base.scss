@@ -47,7 +47,7 @@ blockquote {
   color:$dark-text;
   //text-transform: uppercase;
   font-family:'TrajanPro', serif;
-  margin:0 0 ;
+  margin:2em 0 ;
   padding:0 0 0 2em;
   border-left:6px solid $light-bg;
   p {
@@ -70,10 +70,12 @@ blockquote {
   display:inline-block;
   padding:0.75em 1em 0.25em;
   text-transform: uppercase;
+  text-align: center;
   line-height: 1em;
   font-weight: bold;
   color:$footer-text;
   text-shadow: 0 0 3px $dark-bg;
+  
   &:hover, &:focus {
     color:lighten($footer-text,13%);
     text-decoration: none;
@@ -95,6 +97,16 @@ blockquote {
       url('../img/border_bottom.png') repeat-x center bottom,
       url('../img/border_top.png') repeat-x center top transparent
       ;
+  }
+
+  small {
+    display: block;
+    text-transform: none;
+    font-family: freehand;
+    font-weight: normal;
+    font-size: 2em;
+    margin-top:0.25em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -138,7 +150,7 @@ blockquote {
   max-width: $maximum;
   margin:0 auto;
   //color:$dark-bg;
-  padding:1em 1em 3em;
+  padding:2em 1em;
 
 
 

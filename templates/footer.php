@@ -1,7 +1,7 @@
 <footer class="content-info container" role="contentinfo">
   <div class="footer-inner">
       <?php dynamic_sidebar('sidebar-footer'); ?>
-      <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+      <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | All rights reserved | Handcrafted Site with Love by <a href="http://hydrogene.hu">Hydrogene</a>  </p>
   </div>
 </footer>
 

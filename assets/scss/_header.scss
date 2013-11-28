@@ -1,25 +1,54 @@
 .banner {
 	background: 
 	url('../img/menu_szele.png') repeat-x center bottom,
-	url(../img/header_bg.jpg) repeat-x center top white;
+	url(../img/header_bg.jpg) repeat-x 64% bottom white;
+
+	@include breakpoint($s1){
+		background: 
+		url('../img/menu_szele.png') repeat-x center bottom,
+		url(../img/header_bg.jpg) repeat-x 44% bottom white;
+	}
+
+	@include breakpoint($s2){
+		background: 
+		url('../img/menu_szele.png') repeat-x center bottom,
+		url(../img/header_bg.jpg) repeat-x center top white;
+	}
+
 }
 
 .fej {
 	margin:0 auto;
 	max-width: $maximum;
-	height:112px;
-	padding:0 1em;
+	padding:0 0.5em;
+
+	@include breakpoint($s1){
+		padding:0 1em;
+	}
+	@include breakpoint($s2){
+		height:112px;
+		padding:0 1em;
+	}
 }
+
 .logo {
 	text-decoration: none;
 	display: block;
 	margin:0 auto;
-	width:170px;
+	width:120px;
+	margin-bottom:0.5em;
+
 	
 	@include breakpoint($s1){
+		//width:170px;
+		//margin-bottom:0;
 		float:left;
+
+	}
+	@include breakpoint($s2){
 		width:auto;
-	} 
+		float:left;
+	}  
 }
 
 .slogan {
@@ -28,14 +57,23 @@
 	line-height:0.75em;
 	color:black;
 	text-align: center;
-	//margin:1.25em 1em 0;
-	display: inline-block;
-	@include breakpoint($s1){
-		float:left;
-		margin:1em 1em 0;
-		text-align: left;
-		width:40%;
+	display:none;
 
+	@include breakpoint($s1){
+		display: block;
+		font-size: 1.75em;	
+		float:right;
+		margin:0.66666em 0 0.125em;
+		text-align: left;
+
+	} 
+	
+	@include breakpoint($s2){
+		font-size: 2em;	
+		float:left;
+		margin:2em 1em 0;
+		text-align: left;
+		//width:40%;
 	} 
 
 }

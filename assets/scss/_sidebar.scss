@@ -80,28 +80,32 @@ h3.fbopener {
 .entry-comments {
   max-width: $maximum;
   margin:0 auto;
-  width:66%;
 
-  .fb-comments {
-    margin:0;
-    padding:0;
-    height:0;
-    opacity:0;
-    display:none;
-    overflow:hidden;
-    transition: opacity 400ms ease-in-out;
+  @include breakpoint($s2){
+    width:66%;
+  } 
+
+  // .fb-comments {
+  //   margin:0;
+  //   padding:0;
+  //   height:0;
+  //   opacity:0;
+  //   display:none;
+  //   overflow:hidden;
+  //   transition: opacity 400ms ease-in-out;
     
-    &.open {
-      display:block;
-      height:auto;
-      opacity:1;
-      margin:1em 0 3em;
-    } 
+  //   &.open {
+  //     display:block;
+  //     height:auto;
+  //     opacity:1;
+  //     margin:1em 0 3em;
+  //   } 
 
-  }
+  // }
 }
 
 .sidebar-wrap {
+  display:none;
   background: linear-gradient(to bottom, $dark-bg 75%, $light-bg 100%);  
 }
 .sidebar {

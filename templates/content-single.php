@@ -1,7 +1,12 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <figure class="entry-figure">
-      <img src="http://lorempixel.com/768/768" alt="<?php the_title(); ?>" />
+    <figure class="entry-figure circa">
+      <?php
+        $orig_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'great11');
+      ?>
+      <a href="<?php echo $orig_image[0]; ?>" class="popup" title="<?php the_title() ?>" >
+      <?php if (has_post_thumbnail()) {the_post_thumbnail('great11');} ?>
+      </a>
     </figure>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
