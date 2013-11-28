@@ -85,17 +85,21 @@
 	right:50%;
 	z-index:1;
 	margin-left:1em;
+	margin-top: 1em;	
 	a {
 		display: block;
-		width:40px;
-		height: 40px;
+		font-size: 35px;
+		line-height: 35px;
+		width:35px;
+		height: 35px;
 		border-radius: 50%;
 		color:white;
 		text-align: center;
-		line-height: 40px;
-		background-color: $dark-text;
+		background-color: $footer-text;
+		transition: all 200ms linear;
 		&:hover,	&:focus{
 			background-color: $dark-bg;
+			color:$footer-text;
 			text-decoration: none;
 		}
 	}

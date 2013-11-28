@@ -1,3 +1,106 @@
+.social-wrap {
+    background: #333;
+    border-bottom:6px solid $linea;
+}
+
+.social-command {
+  max-width: $maximum;
+  margin:0 auto;
+  padding:2em 1em 1em;
+}
+
+
+
+
+h3.fbopener {
+  margin:0 0;
+  padding:0;
+  //text-align: center;
+  a {
+    display: block;
+    padding:0.75em 1em 0.5em 1em;
+    border:1px solid $footer-text;
+    color: $footer-text;
+    &:hover, &:focus {
+      border:1px solid $dark-bg;
+      background: black;
+      color: white;
+      text-decoration: none;
+    }
+    span.entypo {
+      float:right;
+      margin: 0.25em 0 0 1em;
+    }
+
+  }
+
+}
+
+
+.entry-share{
+  margin:0 0;
+  color:$footer-text;
+
+
+  h3 {
+    margin:0.25em 0 0 0;
+    padding:0;
+    float:left;
+    width:50%;
+    small {
+      display: block;
+    }
+  } 
+  
+  ul {
+    display: inline-block;
+    width:50%;
+    margin:0.75em 0 0 0;
+    padding:0;
+  }
+  li {
+    list-style-type: none;
+    a {
+      float:left;
+      display: block;
+      text-align: center;
+      font-size: 2.5em;
+      line-height: 1em;
+      margin-right: 0.25em;
+      color: white;
+      &:hover, &:focus {
+        color: $footer-text;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+
+.entry-comments {
+  max-width: $maximum;
+  margin:0 auto;
+  width:66%;
+
+  .fb-comments {
+    margin:0;
+    padding:0;
+    height:0;
+    opacity:0;
+    display:none;
+    overflow:hidden;
+    transition: opacity 400ms ease-in-out;
+    
+    &.open {
+      display:block;
+      height:auto;
+      opacity:1;
+      margin:1em 0 3em;
+    } 
+
+  }
+}
+
 .sidebar-wrap {
   background: linear-gradient(to bottom, $dark-bg 75%, $light-bg 100%);  
 }
@@ -26,17 +129,7 @@
 
 }
 
-  .widget_fbcomm {
-    h3 {
-      margin-bottom:1em;
-    }
-    .fb-comments {
-      padding: 0.5em;
-      background: #333;
-      border: 2px solid $light-bg;
 
-    }
-  }
   
   .widget_moreref {
 
@@ -45,6 +138,7 @@
       //padding:0;
       //clear:left;
       //float:left;
+      margin:0 15%;
 
     } 
   
@@ -60,7 +154,7 @@
       display:block;
       position: relative;
       float:left;
-      width:25%;
+      width:16.666666%;
       padding:0.75em;
 
 

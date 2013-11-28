@@ -13,6 +13,7 @@ article.post, article.reference {
 		a{
 			display:block;
 			background: black;
+			position: relative;
 			
 			&:hover, &:focus {
 				text-decoration: none;
@@ -21,8 +22,27 @@ article.post, article.reference {
 					filter: brightness(0.5) sepia(0.25) Saturate(1.75);
 				}
 			}
+			
+
+			&:after {
+				transition: all 300ms linear;
+				opacity: 0;
+				position:absolute;
+				top:0;bottom:0;
+				left:0;right:0;
+				vertical-align: middle;
+				text-align: center;
+				content:"\1F50D";
+				font-family: Entypo;
+				font-size: 16em;
+				line-height: 210%;
+				color:$footer-text;
+			}
+			&:hover:after {
+				opacity: 0.3;
+			}
 			img {
-	      transition: all 300ms ease-in;
+	      transition: all 300ms linear;
 	      //filter: brightness(1);
 			}
 		}
@@ -32,7 +52,7 @@ article.post, article.reference {
 	}
 
 	header {
-		margin:2em -0.5em 1em -0.5em;
+		margin:1.5em -0.5em 1em -0.5em;
 		padding: 0 0.5em 0.5em 0.5em;
 		border-bottom: 1px solid $dark-text;
 		@include breakpoint($s2){
@@ -52,7 +72,7 @@ article.post, article.reference {
 		
 	}
 
-	.entry-summary, .entry-content, #respond{
+	.entry-summary, .entry-content, .entry-discl {
 		color:black;
 		@include breakpoint($s2){
 			width:48%;
@@ -63,47 +83,17 @@ article.post, article.reference {
 		} 
 	}
 
-	.entry-share{
+  .entry-discl {
 		font-size: 0.875em;
+		opacity:0.75;
+	  span.picto {
 
-
-
-		@include breakpoint($s2){
-			width:48%;
-			clear:left;
-			float:left;
-			position: absolute;
-			bottom:2em;
-
-		}
-		h3 {
-			margin-bottom: 0.5em;
-			small {
-				display: block;
-			}
+	  }
+	  @include breakpoint($s2){
+			position:absolute;
+			bottom:1em;
 		} 
-		
-		ul {
-			margin:0;
-			padding:0;
-		}
-		li {
-			list-style-type: none;
-			a {
-				float:left;
-				display: block;
-				background: black;
-				border-radius: 50%;
-				text-align: center;
-				width:2em;
-				height:2em;
-				margin-right: 1em;
-
-			}
-		}
-
-
-	}
+  }
 
 	footer {
 		font-size: 0.875em;

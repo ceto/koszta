@@ -1,4 +1,4 @@
-<div class="refnyito"><a href="#">M</a></div>
+<div class="refnyito"><a href="#" title="Összes mutatása"><span class="picto">⚏</span></a></div>
 <div class="chooser" id="chooser">
   <?php get_template_part('taxonomy-prodcat'); ?>
 </div>
@@ -16,23 +16,29 @@
       <?php } ?>
       </a>
     </figure>
-    <header>
-      <?php if ( function_exists('yoast_breadcrumb') ) : ?>
-        <?php // yoast_breadcrumb('<p class="entry-bread">','</p>'); ?>
-      <?php endif; ?>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
 
+    <header>
+      <h1 class="entry-title"><?php the_title(); ?></h1>
     </header>
+    
     <div class="entry-content">
       <?php the_content(); ?>
-      <div class="action">
-        <a href="#" class="btn">Ez kell</a>
-      </div>
     </div>
-    <?php get_template_part('templates/sharing'); ?>
-    <footer class="aclearfix">
+
+    <div class="entry-discl">
+        <h3>Ha rendelni szeretnél</h3>
+        <p>Minden munka egyedileg készül, melyet részletes egyeztetés előz meg.
+          Vedd fel velem a kapcsolatot.
+          Vagy kérdezz, kommentálj itt a termékoldalon</p>
+        <p>Tel: <strong>+36 70 7705653</strong> | E-mail: <strong><a href="mailto:zoli@koszta.hu">zoli@koszta.hu</a></strong></p>
+    </div>
+          
+
+
+    <footer class="clearfix">
         <?php roots_content_nav('nav-reference'); ?>
     </footer>
-  </article>
 
+  </article>
 <?php endwhile; ?>
+

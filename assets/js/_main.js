@@ -92,6 +92,9 @@ jQuery(document).ready(function() {
     });
   }
   
-
+  $('.comment-nyito').click(function(e){
+    e.preventDefault();
+    $('.fb-comments').toggleClass('open');
+  });
 
 });

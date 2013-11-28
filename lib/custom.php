@@ -137,8 +137,8 @@ function roots_content_nav( $nav_id ) {
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?> clearfix">
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '%link', _x( '', 'Previous post link', 'ligeti' ) . '%title' ); ?>
-		<?php next_post_link( '%link', '%title' . _x( '', 'Next post link', 'ligeti' )  ); ?>
+		<?php previous_post_link( '%link', _x( '', 'Previous post link', 'ligeti' ) . '<span class="entypo triangle-left"></span> %title' ); ?>
+		<?php next_post_link( '%link', '%title <span class="entypo triangle-right"></span>' . _x( '', 'Next post link', 'ligeti' )  ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 

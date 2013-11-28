@@ -138,12 +138,13 @@ blockquote {
   max-width: $maximum;
   margin:0 auto;
   //color:$dark-bg;
-  padding:1em;
+  padding:1em 1em 3em;
 
 
 
   
   h1,h2,h3,h4,h5,h6{
+   font-weight: normal;
    color:$dark-text;
   }
 }
@@ -169,4 +170,23 @@ blockquote {
   }
 }
 
+
+
+
+.balfel {
+
+  @include breakpoint($s1) {
+    float:left;
+    width:50%;
+  }
+}
+
+.jobbfel {
+
+  @include breakpoint($s1) {
+    float:left;
+    width:50%;
+  }
+
+}
 

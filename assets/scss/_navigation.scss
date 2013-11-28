@@ -139,8 +139,15 @@
 
 
 .navigation-post {
+
 	a {
 		max-width: 48%;
+
+		&:hover, &:focus {
+			text-decoration: none;
+				
+		}
+
 		&[rel="prev"]{
 			float:left;
 		}
@@ -148,12 +155,11 @@
 		&[rel="next"]{
 			float:right;
 		}
-
-
 		
-
-		
-
+		.entypo {
+			font-size: 3em;
+			vertical-align: -0.13333em;
+		}
 
 	}
 
