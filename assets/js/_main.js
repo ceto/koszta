@@ -143,30 +143,7 @@ jQuery(document).ready(function() {
     overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
   });
 
-
-
-  // if (typeof Galleria!=='undefined') {
-  //   Galleria.loadTheme('http://kommandanten.no/wp-content/themes/komandanten/assets/galleria/classic/galleria.classic.js');
-  //   Galleria.run('#galleria',{
-  //     transition: 'fade',
-  //     imageCrop: true,
-  //     autoplay: 3000,
-  //     showInfo: false,
-  //   });
-  //   Galleria.ready(function() {
-  //     var gallery = this;
-  //     $('<a>', {
-  //         href: '#',
-  //         class:'fullbtn',
-  //         click:function(e) {
-  //             e.preventDefault();
-  //             gallery.enterFullscreen();
-  //         }
-  //     }).append('<i class="entypo resize-full"></i>' ).appendTo('#galleria');
-    
-  //   });
-  // }
-  
+ 
   $('.opbutt').click(function(e){
     e.preventDefault();
     $('.nav-row').toggleClass('open');

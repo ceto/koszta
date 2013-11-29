@@ -3582,16 +3582,14 @@ article.reference footer {
 }
 
 .home {
-  background: url('../img/index_bg_1920px_3.jpg') no-repeat right 92px black;
+  background: url('../img/index_bg_1920px_3.jpg') no-repeat right 0 black;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
 }
 
 @media only screen and (min-width: 768px) {
-  .home {
-    background-position: right 153px;
-  }
+
 }
 
 .home .container[role="document"] {
@@ -3656,7 +3654,7 @@ article.reference footer {
 }
 
 .page-template-template-contact-php {
-  background: url('../img/index_bg_1920px_2.jpg') no-repeat right 50px black;
+  background: url('../img/index_bg_1920px_2.jpg') no-repeat right 0 black;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -3740,6 +3738,38 @@ article.reference footer {
 .page-template-template-galleria-php .main {
   max-width: none;
   padding: 0;
+  background: black;
+}
+
+.page-template-template-galleria-php .galleria {
+  height: 800px;
+}
+
+.page-template-template-galleria-php .content-info {
+  display: none;
+}
+
+.fullbtn {
+  position: absolute;
+  display: block;
+  float: right;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 52px;
+  text-align: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.fullbtn:hover,
+.fullbtn:focus {
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
 }
 
 /* Galleria Classic Theme 2012-08-07 | https://raw.github.com/aino/galleria/master/LICENSE | (c) Aino */
@@ -3762,16 +3792,16 @@ article.reference footer {
 
 .galleria-stage {
   position: absolute;
-  top: 10px;
-  bottom: 60px;
-  left: 10px;
-  right: 10px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   overflow: hidden;
 }
 
 .galleria-thumbnails-container {
   height: 50px;
-  bottom: 0;
+  bottom: 16px;
   position: absolute;
   left: 10px;
   right: 10px;
@@ -3812,7 +3842,7 @@ article.reference footer {
   right: 10px;
   z-index: 2;
   display: none;
-  background: url(classic-loader.gif) no-repeat 2px 2px;
+  background: url(../js/vendor/galleria-themes/classic/classic-loader.gif) no-repeat 2px 2px;
 }
 
 .galleria-info {
@@ -3824,7 +3854,7 @@ article.reference footer {
 }
 
 .galleria-info-text {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 12px;
   display: none;
   /* IE7 */
@@ -3832,16 +3862,19 @@ article.reference footer {
 }
 
 .galleria-info-title {
-  font: bold 12px/1.1 arial, sans-serif;
+  font-family: 'TrajanPro', serif;
+  text-transform: uppercase;
   margin: 0;
   color: white;
   margin-bottom: 7px;
 }
 
 .galleria-info-description {
-  font: italic 12px/1.4 georgia, serif;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.875em;
+  font-family: 'TrajanPro', serif;
   margin: 0;
-  color: #bbbbbb;
+  color: #dedede;
 }
 
 .galleria-info-close {
@@ -3974,7 +4007,7 @@ article.reference footer {
 .galleria-info-close,
 .galleria-image-nav-left,
 .galleria-image-nav-right {
-  background-image: url(classic-map.png);
+  background-image: url(../js/vendor/galleria-themes/classic/classic-map.png);
   background-repeat: no-repeat;
 }
 

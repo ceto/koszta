@@ -18,8 +18,6 @@ module.exports = function(grunt) {
         files: {
           'assets/js/scripts.min.js': [
             'assets/js/plugins/*.js',
-            '!assets/js/plugins/galleria-1.3.2.js',
-            '!assets/js/plugins/galleria.classic.js',
             'assets/js/_*.js'
           ]
         }

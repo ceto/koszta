@@ -1,10 +1,12 @@
 .home {
-		background: url('../img/index_bg_1920px_3.jpg') no-repeat right 92px black;
+		background: url('../img/index_bg_1920px_3.jpg') no-repeat right 0 black;
   	background-size: cover;
   	background-attachment: fixed;
 
   	@include breakpoint($s2) {
-	    background-position: right 153px;
+	   // 	background: url('../img/index_bg_1920px_3.jpg') no-repeat right 0 black;
+  		// background-size: cover;
+  		// background-attachment: fixed;
   	}
 
 	.container[role="document"] {
