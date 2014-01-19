@@ -1,5 +1,4 @@
-<div class="refnyito"><a data-toggle="collapse" data-target="#chooser" title="Összes mutatása"><span class="picto"></span> Mutasd mindet</a></div>
-<div class="chooser collapse" id="chooser">
+<div class="chooser acollapse zoom-anim-dialog mfp-hide" id="chooser">
   <?php get_template_part('taxonomy-prodcat'); ?>
 </div>
 
@@ -9,7 +8,8 @@
 <?php // $akt_prodcat = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
-    <figure class="entry-figure circa">
+    <?php $full_bg = wp_get_attachment_image_src( get_post_thumbnail_id(), 'great11'); ?>
+    <figure class="entry-figure full-bg" style="background-image:url(<?php echo $full_bg[0]; ?>)">
       <?php
         $orig_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'great11');
       ?>
@@ -21,6 +21,10 @@
     </figure>
 
     <header>
+      <div class="refnyito">
+  <a class="popup-with-zoom-anim" data-toggle="acollapse" href="#chooser" data-target="#chooser" title="Összes mutatása">
+    <span class="ion-grid"></span></a>
+</div>
       <h1 class="entry-title"><?php the_title(); ?></h1>
     </header>
     

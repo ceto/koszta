@@ -15,6 +15,7 @@
 
   <div class="wrap container " role="document">
     <div class="content">
+      
       <div class="main-wrap">
         <div class="main clearfix <?php echo roots_main_class(); ?>" role="main">
           <?php include roots_template_path(); ?>
@@ -22,11 +23,6 @@
       </div>
       <?php if (roots_display_sidebar()) : ?>
       <?php get_template_part('/templates/social','row'); ?>
-      <div class="sidebar-wrap">
-        <aside class="sidebar clearfix <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      </div>
       <?php endif; ?>
     </div><!-- /.content -->
   </div><!-- /.wrap -->

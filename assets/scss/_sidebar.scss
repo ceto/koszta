@@ -1,6 +1,8 @@
 .social-wrap {
     background: #333;
-    border-bottom:6px solid $linea;
+	position:relative;
+	z-index:2;
+//    border-bottom:6px solid $linea;
 }
 
 .social-command {
@@ -27,9 +29,9 @@ h3.fbopener {
       color: white;
       text-decoration: none;
     }
-    span.entypo {
+    span {
       float:right;
-      margin: 0.25em 0 0 1em;
+      margin: 0 0 0 1em;
     }
 
   }
@@ -55,21 +57,27 @@ h3.fbopener {
   ul {
     display: inline-block;
     width:50%;
-    margin:0.75em 0 0 0;
+    margin:0 0 0 0;
     padding:0;
   }
   li {
     list-style-type: none;
     a {
       float:left;
-      display: block;
+      vertical-align:middle;
+      display: inline-block;
       text-align: center;
-      font-size: 2.5em;
-      line-height: 1em;
-      margin-right: 0.25em;
-      color: white;
+      font-size: 1.75em;
+      line-height: 1.666em;
+      margin-right: 0.333em;
+	  color: #333;
+	  background-color:$footer-text;
+	  border-radius:50%;
+	  width:1.5em;
+	  height:1.5em;
       &:hover, &:focus {
         color: $footer-text;
+		background-color: $linea;
         text-decoration: none;
       }
 
@@ -105,8 +113,9 @@ h3.fbopener {
 }
 
 .sidebar-wrap {
-  display:none;
-  background: linear-gradient(to bottom, $dark-bg 75%, $light-bg 100%);  
+  background: url('../img/divider.gif') repeat-x center bottom, linear-gradient(to bottom, $dark-bg 25%, $light-bg 50%); 
+  padding-bottom: 5em;
+  border-top: 6px solid $linea;
 }
 .sidebar {
 
@@ -142,7 +151,7 @@ h3.fbopener {
       //padding:0;
       //clear:left;
       //float:left;
-      margin:0 15%;
+      //margin:0 15%;
 
     } 
   

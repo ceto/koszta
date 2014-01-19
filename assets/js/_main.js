@@ -84,9 +84,33 @@ jQuery(document).ready(function() {
     if (y >= top) {
       // if so, ad the fixed class
       $('.nav-row').addClass('fixed');
+      //$('.full-bg').addClass('fixed');
+
     } else {
       // otherwise remove it
       $('.nav-row').removeClass('fixed');
+      //$('.full-bg').removeClass('fixed');
+       
+    }
+  });
+
+  var topi = $('.social-wrap').offset().top - $(window).height() -42;
+
+  $(window).scroll(function (event) {
+
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+    //window.alert(topi);
+    // whether that's below the form
+    if (y >= topi) {
+
+      // if so, ad the fixed class
+      $('.full-bg').addClass('abs');
+
+    } else {
+      // otherwise remove it
+      $('.full-bg').removeClass('abs');
+       
     }
   });
 
@@ -148,5 +172,46 @@ jQuery(document).ready(function() {
     e.preventDefault();
     $('.nav-row').toggleClass('open');
   });
+
+  $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-slide-bottom'
+  });
+
+  $('.popup-with-zoom-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+
+// var $container = $('.reflist');
+// $container.isotope({
+// });
+// $('.prodcat-menu a').click(function(){
+//   var selector = $(this).attr('data-filter');
+//   $container.isotope({ filter: selector });
+//   return false;
+// });
 
 });

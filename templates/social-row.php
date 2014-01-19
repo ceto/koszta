@@ -7,7 +7,7 @@
     
     <div class="jobbfel">
       <h3 class="fbopener">
-        <a class="comment-nyito" data-toggle="collapse" data-target="#responds">Kérdezz, szólj hozzá <span class="entypo chevron-thin-down"></span></a>
+        <a class="comment-nyito" data-toggle="collapse" data-target="#responds">Kérdezz, szólj hozzá <span class="ion-chevron-down"></span></a>
       </h3>   
     </div>
   </section>

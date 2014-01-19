@@ -19,13 +19,13 @@
   ?>
   <ul class="prodcat-menu">
     <li>
-      <a class="<?php echo $aktcat->slug==''?'active':''; ?>" href="?page_id=13" title="Teljes portfolió">
+      <a data-filter="*" class="<?php echo $aktcat->slug==''?'active':''; ?>" href="?page_id=13" title="Teljes portfolió">
         Mutasd mindet
       </a>
     </li>
     <?php foreach ($terms as $term) { ?>
       <li>
-      <a class="<?php echo $term->slug==$aktcat->slug?'active':''; ?>" data-catslug="<?php echo $term->slug; ?>" href="<?php echo get_term_link($term); ?>" title="<?php echo $term->name; ?>">
+      <a class="<?php echo $term->slug==$aktcat->slug?'active':''; ?>" data-filter=".<?php echo $term->slug; ?>" href="<?php echo get_term_link($term); ?>" title="<?php echo $term->name; ?>">
         <?php echo $term->name; ?>
       </a>
       </li>

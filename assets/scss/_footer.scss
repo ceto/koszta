@@ -1,7 +1,8 @@
 .content-info{
+	position:relative;
+	z-index:2;
 	color:$footer-text;
-	background: url('../img/divider.gif') repeat-x center top $dark-bg;
-	padding-top:4em;
+  //  background-image: linear-gradient(to bottom, $linea, $dark-bg 50px);
 
 }
 

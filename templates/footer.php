@@ -1,4 +1,9 @@
 <footer class="content-info container" role="contentinfo">
+  <div class="sidebar-wrap">
+    <aside class="sidebar clearfix <?php echo roots_sidebar_class(); ?>" role="complementary">
+      <?php include roots_sidebar_path(); ?>
+    </aside>
+  </div>
   <div class="footer-inner">
       <?php dynamic_sidebar('sidebar-footer'); ?>
       <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | All rights reserved | Handcrafted Site with Love by <a href="http://hydrogene.hu">Hydrogene</a>  </p>
@@ -15,4 +20,4 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<script src="http://szabogabi.tk:35729/livereload.js"></script>
+<script src="http://ceto.no-ip.org:35729/livereload.js"></script>
