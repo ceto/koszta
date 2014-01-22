@@ -2,25 +2,31 @@
 	min-height: 590px;
 }
 
-.full-bg {
-	@include breakpoint($s2){
-		&.abs{
-			position:absolute;
-			top:0;
-			bottom:0;
-		}
-	}
-}
+
 article.post, article.reference {
 	//position: relative;
 	
-	figure  {
+	.entry-figure  {
 		margin:-2em -1em 0 -1em;
 		background-repeat:no-repeat;
 		background-position:50% 50%;
 		background-size: cover;
 		min-height:320px;
 		filter: brightness(0.5) sepia(0.25) Saturate(1.75);
+		&.full-bg {
+			@include breakpoint($s2){
+				&.abs{
+					position:absolute;
+					top:0;
+					bottom:0;
+					//min-height: 100%;
+				}
+			}
+		}
+		
+
+
+
 		@include breakpoint($s2){
 			position:fixed;
 			top:42px;
@@ -38,6 +44,7 @@ article.post, article.reference {
 			display:block;
 			background: black;
 			position: relative;
+
 			
 			&:hover, &:focus {
 				text-decoration: none;
@@ -46,6 +53,7 @@ article.post, article.reference {
 				cursor: zoom-in;
 				img {
 					//opacity:0.5;
+
 					filter: brightness(0.5) sepia(0.25) Saturate(1.75);
 				}
 			}
@@ -102,6 +110,13 @@ article.post, article.reference {
 		font-size: 1.5em;
 		margin:0;
 		padding:0;
+		
+		a {
+			&:hover,&:focus{
+				text-decoration:none;
+			}
+			
+		}
 
 		
 	}
@@ -140,7 +155,13 @@ article.post, article.reference {
   	
   	.btn {
   		margin-top:2em;
-			display:block;
+			transition:all .2s linear;
+			display:inline-block;
+			padding:0.5em 0.5em;
+			font-size:1.25em;
+			line-height:1em;
+			font-weight:400;
+			font-family:'TrajanPro', serif;
 			color:$dark-text;
 			background: rgba($light-bg,0.2);
 			text-shadow: 0 0 2px $footer-text;
@@ -187,7 +208,7 @@ article.post, article.reference {
 }
 .blog article.post {
 	margin-bottom: 4em;
-	figure{
+	.entry-minifigure{
 		text-align: center;
 		@include breakpoint($s1){
 			text-align: left;
@@ -203,16 +224,21 @@ article.post, article.reference {
 		
 		a {
 			background: none;
+			display:inline-block;
+			
 			&:hover, &:focus {
 				cursor: pointer;
 				img {
-					filter: brightness(0.5) sepia(0.25) Saturate(1.75);
+					filter: brightness(0.5) sepia(0.25) saturate(1.75);
 				}
 			}
 			
 
 			&:after {
 				display: none;
+			}
+			img {
+				transition:all .2s linear;
 			}
 
 
@@ -241,7 +267,22 @@ article.post, article.reference {
 
 			width:50%;
 			margin:0 10%;
-		} 
+		}
+		a{
+			display:block;
+			margin-top:1em;
+			text-align:center;
+			max-width:6em;
+			padding:0.125em 0.25em;
+			color:#fff;
+			background-color:rgba($dark-text,0.666);
+			&:hover, &:focus {
+				background-color:rgba($dark-text,0.75);
+				color:#fff;
+				text-decoration:none;
+			}
+					
+		}
 	}
 }
 
@@ -254,8 +295,7 @@ article.post, article.reference {
 		float:left;
 		background: black;
 		position: relative;
-		border:1px solid $dark-text;
-		
+		backface-visibility:hidden;
 		&:hover, &:focus {
 			text-decoration: none;
 			cursor: -moz-zoom-in;
@@ -265,7 +305,9 @@ article.post, article.reference {
 				filter: brightness(0.5) sepia(0.25) Saturate(1.75);
 			}
 		}
-		
+		&:before {
+			z-index:1 !important;
+		}
 
 		&:after {
 			transition: all 300ms linear;
@@ -275,10 +317,11 @@ article.post, article.reference {
 			left:0;right:0;
 			vertical-align: middle;
 			text-align: center;
-			content:"\1F50D";
-			font-family: Entypo;
-			font-size: 10em;
-			line-height: 110%;
+			content:"\f21f";
+			font-family: Ionicons;
+			font-size: 5em;
+			font-weight:400;
+			line-height: 200%;
 			color:$footer-text;
 		}
 		&:hover:after {

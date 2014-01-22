@@ -1,4 +1,4 @@
-<div class="chooser acollapse zoom-anim-dialog mfp-hide" id="chooser">
+<div class="chooser acollapse zoom-anim-dialog mfp-hide szaggat" id="chooser">
   <?php get_template_part('taxonomy-prodcat'); ?>
 </div>
 
@@ -22,7 +22,7 @@
 
     <header>
       <div class="refnyito">
-  <a class="popup-with-zoom-anim" data-toggle="acollapse" href="#chooser" data-target="#chooser" title="Összes mutatása">
+  <a class="popup-with-zoom-anim" href="#chooser" data-target="#chooser" title="Összes mutatása">
     <span class="ion-grid"></span></a>
 </div>
       <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -41,12 +41,11 @@
           Vedd fel velem a kapcsolatot.
           Vagy kérdezz, kommentálj itt a termékoldalon</p>
         <p>Tel: <strong>+36 70 7705653</strong> | E-mail: <strong><a href="mailto:zoli@koszta.hu">zoli@koszta.hu</a></strong></p>
-        <a href="?page_id=11&ap_id=<?php echo get_the_ID(); ?>" title="Ajánlat kérése" class="btn"><small>Árajánlatot kérek</small></a>
- 
+        
+        <a href="#respond" data-subject="<?php echo get_the_title(); ?>" class="btn buy popup-with-form"><span class="ion-paper-airplane"></span> Ajánlatot kérek</a>
+
     </div>
-    
-
-
+    <?php get_template_part('templates/contact','form' ); ?>
     <footer class="clearfix">
         <?php roots_content_nav('nav-reference'); ?>
     </footer>

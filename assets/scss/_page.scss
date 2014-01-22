@@ -1,7 +1,22 @@
 .page-template-template-contact-php{
-    background: url('../img/index_bg_1920px_2.jpg') no-repeat right 0 black;
+    background-color:#000;
+    background-image:url('../img/index_bg_1920px_2.jpg');
+    background-repeat: no-repeat;
+    background-position: 55% top; 
     background-size: cover;
     background-attachment: fixed;
+    
+    @include breakpoint($s1){
+    
+    } 
+    
+    @include breakpoint($s2){
+      background-position: 60% top; 
+    } 
+
+    @include breakpoint($s3){
+      background-position: 80% top; 
+    } 
   
   .main-wrap {
     background: none;
@@ -12,10 +27,18 @@
     color:$footer-text;
     font-size: 1.25em;
     padding-top:4em;
+
     @include breakpoint($s2){
-      padding-right:30%;
+      padding-right:40%;
       //padding-top:20%;
       //padding-left: 2em;
+    }
+
+    a {
+      &:hover {
+        color:$footer-text;
+        text-decoration: none;
+      }
     } 
 
   }
@@ -23,6 +46,10 @@
   .content-info{
     display:none;
   }
+}
+
+.traji{
+  font-family: 'TrajanPro', serif;
 }
 
 .page-id-2 {

@@ -1,5 +1,5 @@
 .social-wrap {
-    background: #333;
+  background: #333;
 	position:relative;
 	z-index:2;
 //    border-bottom:6px solid $linea;
@@ -144,57 +144,95 @@ h3.fbopener {
 
 
   
-  .widget_moreref {
+.widget_related {
 
-    @include breakpoint($s2){
-      //width:66.6666666666%;
-      //padding:0;
-      //clear:left;
-      //float:left;
-      //margin:0 15%;
+  @include breakpoint($s2){
+    //width:66.6666666666%;
+    //padding:0;
+    //clear:left;
+    //float:left;
+    //margin:0 15%;
 
-    } 
+  } 
   
+  .widget-title{
+    text-align: center;
+    font-size: 1.5em;
+  }
 
-  ul {
-    margin:1em -0.75em 1em; 
+  ol {
+    margin:1em 0; 
     padding:0;
     li {
       list-style-type: none;
+      width:auto;
+      padding:1em 0;
+
+      &:last-child{
+        padding-right: 0;
+      }
+      @include breakpoint($s2){
+        float:left;
+        width:33.3333333%;
+        padding:1em 1.5em 1em 0;
+      }
+      
     }
-    a {
-      text-align: center;
-      display:block;
-      position: relative;
+    .thumblink {
       float:left;
-      width:16.666666%;
-      padding:0.75em;
-
-
+      display:block;
+      width:89px;
+      margin-right: 0.5em;
+	  backface-visibility:hidden;
+		&:hover, &:focus {
+			img {
+				filter: brightness(0.5) sepia(0.25) saturate(1.75);
+			}
+		}
       img {
-        //width:40%;
+		  transition: all .2s linear;
         display:block;
-        //margin:0 auto;  
-        //float:left;
       }
-      .neve {
-        position: absolute;
-        display:block;
-        top:0; right:0;
-        bottom:0; left:0;
-        padding:1em 0.75em;
-        font-family: 'TrajanPro', serif;
-        font-size: 0.875em;
+    }
+    
+    .rel-cont {
+      display:block;
 
+      font-size: 0.875em;
+      h3 {
+        margin-top: 0;
+		a{
+			&:hover, &:focus {
+				color:$footer-text;
+				text-decoration:none;
+			}
+			
+		}
+      }
+      p{
+        
+        a{
+			display:block;
+			//margin-left:97px;
+			margin:0.5em 0 0;
+			text-align:center;
+			max-width:6em;
+			//float:right;
+			//margin-left:0.5em;
+			padding:0.125em 0.25em;
+			background-color:rgba($dark-text,0.25);
+			&:hover, &:focus {
+				background-color:rgba($dark-text,0.5);
+				color:#fff;
+				text-decoration:none;
+			}
+		}
       }
 
     }
 
-
   }
-
-
-  }
+}
 
 
 

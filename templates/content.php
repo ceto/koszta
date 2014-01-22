@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
-  <figure class="entry-figure">
-    <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" >
+  <figure class="entry-minifigure">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" class="szaggat" >
     <?php if (has_post_thumbnail()) {the_post_thumbnail('tiny11');} ?>
     </a>
   </figure>

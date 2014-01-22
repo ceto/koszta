@@ -78,41 +78,27 @@ jQuery(document).ready(function() {
 
   var top = $('.nav-row').offset().top - parseFloat($('.nav-row').css('marginTop').replace(/auto/, 0));
   $(window).scroll(function (event) {
-    // what the y position of the scroll is
     var y = $(this).scrollTop();
-    // whether that's below the form
     if (y >= top) {
-      // if so, ad the fixed class
       $('.nav-row').addClass('fixed');
-      //$('.full-bg').addClass('fixed');
-
     } else {
-      // otherwise remove it
       $('.nav-row').removeClass('fixed');
-      //$('.full-bg').removeClass('fixed');
-       
     }
   });
 
-  var topi = $('.social-wrap').offset().top - $(window).height() -42;
+  if ($('.social-wrap').length > 0) {
+    var topi = $('.social-wrap').offset().top - $(window).height() - 42;
+    if (0 >= topi) {  $('.full-bg').addClass('abs'); }
 
-  $(window).scroll(function (event) {
-
-    // what the y position of the scroll is
-    var y = $(this).scrollTop();
-    //window.alert(topi);
-    // whether that's below the form
-    if (y >= topi) {
-
-      // if so, ad the fixed class
-      $('.full-bg').addClass('abs');
-
-    } else {
-      // otherwise remove it
-      $('.full-bg').removeClass('abs');
-       
-    }
-  });
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= topi) {
+        $('.full-bg').addClass('abs');
+      } else {
+        $('.full-bg').removeClass('abs');
+      }
+    });
+  }
 
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -203,6 +189,36 @@ jQuery(document).ready(function() {
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
+  });
+
+  $('[data-subject]').click(function(){
+    $('#message_betreff').val( $('[data-subject]').attr('data-subject') );
+  });
+
+  $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    focus: '#message_name',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+
+    // When elemened is focused, some mobile browsers in some cases zoom in
+    // It looks not nice, so we disable it:
+    callbacks: {
+      beforeOpen: function() {
+        if($(window).width() < 700) {
+          this.st.focus = false;
+        } else {
+          this.st.focus = '#message_name';
+        }
+      }
+    }
   });
 
 // var $container = $('.reflist');

@@ -18,7 +18,8 @@ function create_reference_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'bordiszmuvek'),
-			'supports' => array('title', 'editor', 'thumbnail')
+			'supports' => array('title', 'editor', 'thumbnail'),
+      'yarpp_support' => true
 		)
 	);
 }

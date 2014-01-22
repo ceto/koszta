@@ -1,0 +1,71 @@
+/***************** Contact popup *****************/
+.contact-wrap {
+  .entry-title {
+    margin-bottom: 3em;
+  }
+
+  .controlsa {
+    margin:0.5em auto;
+    width:auto;
+
+    label {
+
+      display:block;
+        width: auto;
+        margin-right:0;
+        text-align:left;
+
+
+    }
+    input,textarea {
+      
+      width:100%;
+      border: 1px solid $footer-text;
+      padding:0.25em 0.25em;
+      color: $linea;
+      background-color: rgba(#fff,0.3);
+      outline-color:$footer-text;
+
+    }
+    textarea {
+      width:100%;
+
+
+    }
+  }
+  .actions {
+    margin:0.5em auto;
+    width:auto; 
+
+  }
+  .btn {
+    //text-transform: none;
+    //font-weight: 400;
+    display:inline-block !important;
+  }
+  .submitbtn {
+    border:none;
+    padding: 0.5em 0.5em;
+    background-color:rgba($dark-text,0.2);
+    //color:#fff;
+    font-family: 'TrajanPro', serif;
+    font-size:1em;
+    font-weight: 400;
+    color:$dark-text;
+    line-height:1em;
+    text-shadow:none;
+  
+  }
+
+  .phone {
+    display:block;
+    margin-top: 1em;
+  }
+  .oki {
+    text-align: left;
+    margin-top: 2em;
+    font-size: 0.75em;
+    
+  }
+
+}

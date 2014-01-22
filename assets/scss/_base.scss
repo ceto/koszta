@@ -89,7 +89,7 @@ blockquote {
     z-index:0;
     display:block;
     content:" ";
-    right:-4px; left:-4px; top:-7px; bottom:-7px;
+    right:-3px; left:-3px; top:-3px; bottom:-3px;
     opacity:0.6;
     background:
       url('../img/border_right.png') repeat-y right top,
@@ -189,18 +189,20 @@ blockquote {
 
 
 .balfel {
-
-  @include breakpoint($s1) {
+  @include clearfix();
+  @include breakpoint($s2) {
     float:left;
     width:50%;
   }
 }
 
 .jobbfel {
-
-  @include breakpoint($s1) {
+  @include clearfix();
+  margin-top:1em;
+  @include breakpoint($s2) {
     float:left;
     width:50%;
+    margin-top:0;
   }
 
 }

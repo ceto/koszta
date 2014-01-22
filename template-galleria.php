@@ -56,7 +56,7 @@
                 e.preventDefault();
                 gallery.enterFullscreen();
             }
-        }).append('<span class="entypo resize-full"></span>' ).appendTo('#galleria');
+        }).append('<span class="ion-arrow-expand"></span>' ).appendTo('#galleria');
 
       });
     };

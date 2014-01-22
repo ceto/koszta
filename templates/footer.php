@@ -6,7 +6,6 @@
   </div>
   <div class="footer-inner">
       <?php dynamic_sidebar('sidebar-footer'); ?>
-      <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | All rights reserved | Handcrafted Site with Love by <a href="http://hydrogene.hu">Hydrogene</a>  </p>
   </div>
 </footer>
 
@@ -20,4 +19,4 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<script src="http://ceto.no-ip.org:35729/livereload.js"></script>
+<!-- script src="http://ceto.no-ip.org:35729/livereload.js"></script -->
