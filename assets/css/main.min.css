@@ -3984,7 +3984,7 @@ article.post footer, article.reference footer {
     right: -3px;
     bottom: -3px;
     left: -3px;
-    z-index: -1;
+    z-index: 0;
     background: url(../img/border_top.png) repeat-x center top, url(../img/border_right.png) repeat-y right center, url(../img/border_bottom.png) repeat-x center bottom, url(../img/border_left.png) repeat-y left center; }
 
 .mfp-figure figure:before {
@@ -4847,6 +4847,8 @@ img.mfp-img {
   width: auto;
   max-width: 480px;
   margin: 20px auto; }
+  .white-popup-block:before {
+    z-index: -1; }
   @media only screen and (min-width: 480px) {
     .white-popup-block {
       padding: 14px 40px 14px; } }
