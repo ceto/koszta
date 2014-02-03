@@ -13,7 +13,7 @@
   </section>
 
   <section id="responds" class="entry-comments clearfix collapse">
-    <div class="fb-comments clearfix" data-href="<?php the_permalik(); ?>" data-colorscheme="dark" data-numposts="5"></div>
+    <div class="fb-comments clearfix" data-href="<?php the_permalink(); ?>" data-colorscheme="dark" data-numposts="5"></div>
   </section>
 
 </aside>
