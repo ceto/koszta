@@ -1,5 +1,7 @@
+<?php global $actualurl; ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
+    <?php $actualurl=get_permalink(); ?>
     <?php $full_bg = wp_get_attachment_image_src( get_post_thumbnail_id(), 'great11'); ?>
     <figure class="entry-figure full-bg" style="background-image:url(<?php echo $full_bg[0]; ?>)">
       <?php

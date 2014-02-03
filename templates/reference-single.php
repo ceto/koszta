@@ -1,13 +1,11 @@
+<?php global $actualurl; ?>
 <div class="chooser acollapse zoom-anim-dialog mfp-hide szaggat" id="chooser">
   <?php get_template_part('taxonomy-prodcat'); ?>
 </div>
-
-
-
-
 <?php // $akt_prodcat = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
+    <?php $actualurl=get_permalink(); ?>
     <?php $full_bg = wp_get_attachment_image_src( get_post_thumbnail_id(), 'great11'); ?>
     <figure class="entry-figure full-bg" style="background-image:url(<?php echo $full_bg[0]; ?>)">
       <?php
@@ -35,7 +33,6 @@
 
 
     <div class="entry-discl">
-
         <h3>Ha rendelni szeretnél</h3>
         <p>Minden munka egyedileg készül, melyet részletes egyeztetés előz meg.
           Vedd fel velem a kapcsolatot.
@@ -52,4 +49,5 @@
 
   </article>
 <?php endwhile; ?>
+
 

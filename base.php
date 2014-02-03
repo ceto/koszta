@@ -18,6 +18,7 @@
       
       <div class="main-wrap">
         <div class="main clearfix <?php echo roots_main_class(); ?>" role="main">
+          <?php global $actualurl; ?>
           <?php include roots_template_path(); ?>
         </div><!-- /.main -->
       </div>

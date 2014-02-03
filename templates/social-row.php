@@ -1,3 +1,4 @@
+<?php global $actualurl; ?>
 <aside class="social-wrap clearfix">
   <a name="social" id="social"></a>
   <section class="social-command clearfix">
@@ -11,9 +12,8 @@
       </h3>   
     </div>
   </section>
-
   <section id="responds" class="entry-comments clearfix collapse">
-    <div class="fb-comments clearfix" data-href="<?php the_permalink(); ?>" data-colorscheme="dark" data-numposts="5"></div>
+    <div class="fb-comments clearfix" data-href="<?php echo $actualurl; ?>" data-colorscheme="dark" data-numposts="5"></div>
   </section>
 
 </aside>
