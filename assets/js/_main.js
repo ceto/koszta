@@ -221,6 +221,8 @@ jQuery(document).ready(function() {
     }
   });
 
+  $('.entry-content').fitVids();
+
 // var $container = $('.reflist');
 // $container.isotope({
 // });
