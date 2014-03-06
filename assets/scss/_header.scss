@@ -3,18 +3,24 @@
 	z-index:2;
 	background: 
 	url('../img/menu_szele.png') repeat-x center bottom,
-	url(../img/header_bg.jpg) repeat-x 64% bottom white;
+	url(../img/header_bg.jpg) no-repeat 64% bottom white;
 
 	@include breakpoint($s1){
 		background: 
 		url('../img/menu_szele.png') repeat-x center bottom,
-		url(../img/header_bg.jpg) repeat-x 44% bottom white;
+		url(../img/header_bg.jpg) no-repeat 44% bottom white;
 	}
 
 	@include breakpoint($s2){
 		background: 
 		url('../img/menu_szele.png') repeat-x center bottom,
-		url(../img/header_bg.jpg) repeat-x center top white;
+		url(../img/header_bg.jpg) no-repeat center top white;
+	}
+
+	@include breakpoint($s5){
+		background: 
+		url('../img/menu_szele.png') repeat-x center bottom,
+		url(../img/header_bg.jpg) no-repeat right top white;
 	}
 
 }

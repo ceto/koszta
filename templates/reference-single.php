@@ -37,7 +37,7 @@
         <p>Minden munka egyedileg készül, melyet részletes egyeztetés előz meg.
           Vedd fel velem a kapcsolatot.
           Vagy kérdezz, kommentálj itt a termékoldalon</p>
-        <p>Tel: <strong>+36 70 7705653</strong> | E-mail: <strong><a href="mailto:zoli@koszta.hu">zoli@koszta.hu</a></strong></p>
+        <p>Tel: <strong>+36 70 7713778</strong> | E-mail: <strong><a href="mailto:koszta.borpancel@gmail.com">koszta.borpancel@gmail.com</a></strong></p>
         
         <a href="#respond" data-subject="<?php echo get_the_title(); ?>" class="btn buy popup-with-form"><span class="ion-paper-airplane"></span> Ajánlatot kérek</a>
 

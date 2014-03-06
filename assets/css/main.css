@@ -3306,13 +3306,16 @@ blockquote {
 .banner {
   position: relative;
   z-index: 2;
-  background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) repeat-x 64% bottom white; }
+  background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) no-repeat 64% bottom white; }
   @media only screen and (min-width: 480px) {
     .banner {
-      background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) repeat-x 44% bottom white; } }
+      background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) no-repeat 44% bottom white; } }
   @media only screen and (min-width: 768px) {
     .banner {
-      background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) repeat-x center top white; } }
+      background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) no-repeat center top white; } }
+  @media only screen and (min-width: 1600px) {
+    .banner {
+      background: url("../img/menu_szele.png") repeat-x center bottom, url(../img/header_bg.jpg) no-repeat right top white; } }
 
 .fej {
   margin: 0 auto;
@@ -3964,18 +3967,21 @@ article.post footer, article.reference footer {
   .home .container[role="document"] {
     background: none; }
   .home .main-wrap {
+    height: 100%;
     background: none;
     box-shadow: none; }
   .home .main {
     color: #c7b299;
     font-size: 1.25em;
-    text-transform: uppercase;
-    padding-top: 4em; }
+    text-transform: uppercase; }
     @media only screen and (min-width: 768px) {
       .home .main {
-        padding-right: 30%;
-        padding-top: 20%;
-        padding-left: 2em; } }
+        padding-left: 2em;
+        position: relative;
+        top: 50%;
+        transform: translateY(10%); }
+        .home .main blockquote {
+          margin-right: 30%; } }
     .home .main h1 {
       display: none;
       text-transform: none; }
@@ -3994,7 +4000,6 @@ article.post footer, article.reference footer {
         margin-top: 1em;
         color: #c7b299; }
     .home .main .btn {
-      margin-top: 4em;
       font-size: 0.875em; }
   .home .content-info {
     display: none; }
