@@ -7,7 +7,12 @@
         <span class="ion-social-facebook fb"></span>
       </a>
     </li>
+    <li class="likes">
+      <a data-toggle="collapse" data-target="#responds">
+        <span class="ion-thumbsup"></span>
+      </a>
+    </li>
     <li><a href="#"><span class="ion-social-googleplus gplus"></span></a></li>
-    <li><a href="#"><span class="ion-social-pinterest-outline pin"></span></a></li>
+
   </ul>
 </section>

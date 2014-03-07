@@ -69,7 +69,7 @@ h3.fbopener {
       text-align: center;
       font-size: 1.75em;
       line-height: 1.666em;
-      margin-right: 0.333em;
+      margin-right: 0.5em;
 	  color: #333;
 	  background-color:$footer-text;
 	  border-radius:50%;
@@ -77,18 +77,25 @@ h3.fbopener {
 	  height:1.5em;
       &:hover, &:focus {
         color: $footer-text;
-		background-color: $linea;
+		    background-color: $linea;
         text-decoration: none;
       }
 
     }
   }
 }
+.fb-like {
+  margin:3em auto 1em auto;
+}
+.fb-comments {
+  margin:1em auto 4em auto;
+}
 
 .entry-comments {
   max-width: $maximum;
   margin:0 auto;
-
+  text-align:center;
+	
   @include breakpoint($s2){
     width:66%;
   } 

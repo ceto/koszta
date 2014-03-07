@@ -380,12 +380,6 @@ img {
   -ms-interpolation-mode: bicubic; }
 
 /* facebook comments */
-.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {
-  width: 100% !important; }
-
-.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
-  width: 100% !important; }
-
 @font-face {
   font-family: 'TrajanPro';
   src: url("../fonts/TrajanPro-Regular.eot");
@@ -3529,7 +3523,7 @@ h3.fbopener {
       text-align: center;
       font-size: 1.75em;
       line-height: 1.666em;
-      margin-right: 0.333em;
+      margin-right: 0.5em;
       color: #333;
       background-color: #c7b299;
       border-radius: 50%;
@@ -3540,9 +3534,16 @@ h3.fbopener {
         background-color: #290d00;
         text-decoration: none; }
 
+.fb-like {
+  margin: 3em auto 1em auto; }
+
+.fb-comments {
+  margin: 1em auto 4em auto; }
+
 .entry-comments {
   max-width: 1140px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   @media only screen and (min-width: 768px) {
     .entry-comments {
       width: 66%; } }
