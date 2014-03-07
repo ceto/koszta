@@ -80,13 +80,18 @@
   }
   
   .main {
-    
     @include breakpoint($s2) {
       padding-right:38%;
     }
 
     @include breakpoint($s3) {
-      padding-right:48%;
+      padding-right:50%;
+    }
+    @include breakpoint($s4) {
+      padding-right:45%;
+    }
+    @include breakpoint($s5) {
+     padding-right:35%;
     }
   
   

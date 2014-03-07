@@ -7,7 +7,11 @@
 	box-shadow: -5px 10px 30px -5px black;
 	z-index:3;
 	transition:height 200ms linear;
+	
 
+	@include breakpoint($s2) {
+  		overflow:visible;
+  }
 
 
 	&.fixed {
@@ -82,11 +86,35 @@
     	float:left;
   	}	
 	}
+	
+	@include breakpoint($s2){
+		li.active{
+			position: relative;
+			&:before {
+				display:block;
+				content:'';
+				position:absolute;
+				left:0; right:0;
+				top:0;
+				height:70px;
+				background-image:url(../img/menu_statusz.png);
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: 100% 100%;
 
+			}
+			a {
+				padding-top:0.25em;
+			}
+		}
+	}
+	li.active a {
+		color:white;
+	}
 	a {
 		position:relative;
 		display:block;
-		padding:0.125em 1em;
+		padding:0.125em 1.25em;
 		color:$light-menu;
 		text-decoration: none;
 		text-align:center;

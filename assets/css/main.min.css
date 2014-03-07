@@ -3393,6 +3393,9 @@ blockquote {
   -webkit-transition: height 200ms linear;
   transition: height 200ms linear; }
   @media only screen and (min-width: 768px) {
+    .nav-row {
+      overflow: visible; } }
+  @media only screen and (min-width: 768px) {
     .nav-row.fixed {
       position: fixed;
       top: 0;
@@ -3439,10 +3442,30 @@ blockquote {
     @media only screen and (min-width: 768px) {
       .nav-main li {
         float: left; } }
+  @media only screen and (min-width: 768px) {
+    .nav-main li.active {
+      position: relative; }
+      .nav-main li.active:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 70px;
+        background-image: url(../img/menu_statusz.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%; }
+      .nav-main li.active a {
+        padding-top: 0.25em; } }
+  .nav-main li.active a {
+    color: white; }
   .nav-main a {
     position: relative;
     display: block;
-    padding: 0.125em 1em;
+    padding: 0.125em 1.25em;
     color: #b3b3b3;
     text-decoration: none;
     text-align: center;
@@ -4129,7 +4152,13 @@ article.post footer, article.reference footer {
       padding-right: 38%; } }
   @media only screen and (min-width: 980px) {
     .page-id-2 .main {
-      padding-right: 48%; } }
+      padding-right: 50%; } }
+  @media only screen and (min-width: 1200px) {
+    .page-id-2 .main {
+      padding-right: 45%; } }
+  @media only screen and (min-width: 1600px) {
+    .page-id-2 .main {
+      padding-right: 35%; } }
   .page-id-2 .content-info {
     display: none; }
 
