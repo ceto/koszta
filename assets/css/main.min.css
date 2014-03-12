@@ -3588,7 +3588,10 @@ h3.fbopener {
   margin: 3em auto 1em auto; }
 
 .fb-comments {
-  margin: 1em auto 7em auto; }
+  margin: 1em auto 1em auto; }
+
+.fb-like-box {
+  margin: 1em auto 4em auto; }
 
 .entry-comments {
   max-width: 1140px;
