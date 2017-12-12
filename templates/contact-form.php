@@ -30,7 +30,7 @@
 
   //php mailer variables
   //$to = get_option('admin_email');
-  $to = 'szabogabi@gmail.com';
+  $to = 'koszta.borpancel@gmail.com';
   $subject = "Message from ".get_bloginfo('name');
 
   $headers = "From: " . strip_tags($email) . "\r\n";
